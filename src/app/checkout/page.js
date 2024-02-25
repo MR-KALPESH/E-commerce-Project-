@@ -27,9 +27,10 @@ export default function Checkout() {
 
   const router = useRouter();
   const params = useSearchParams();
-
+// ======================= stripe payment key =======================================(2)
+// stripe payment key
   const publishableKey =
-    "pk_test_51NMv6ZSC6E6fnyMeRIEb9oEXdGRCC9yrBTT4xWHgcjWOuFcqFiAHErvaS50K1hl5t5WJXVGfLLWxvb705IWJhA3300yCcrMnlM";
+    "pk_test_51OU8h3SGLTBMdoDMXXgREWmhpnUqqV7MxkZLyWnPJYeoChUeCN74aa0YQ40TjKAH4uYWmiUfGlHfo38sGOL35Fe300A6vfN1Zv";
   const stripePromise = loadStripe(publishableKey);
 
   console.log(cartItems);
@@ -199,11 +200,11 @@ export default function Checkout() {
       <div className="grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32">
         <div className="px-4 pt-8">
           <p className="font-medium text-xl">Cart Summary</p>
-          <div className="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-5">
+          <div className="mt-8 space-y-3 rounded-lg border bg-white text-black  px-2 py-4 sm:px-5">
             {cartItems && cartItems.length ? (
               cartItems.map((item) => (
                 <div
-                  className="flex flex-col rounded-lg bg-white sm:flex-row"
+                  className="flex flex-col rounded-lg bg-white text-black  sm:flex-row"
                   key={item._id}
                 >
                   <img
@@ -231,13 +232,13 @@ export default function Checkout() {
           <p className="text-gray-400 font-bold">
             Complete your order by selecting address below
           </p>
-          <div className="w-full mt-6 mr-0 mb-0 ml-0 space-y-6">
+          <div className="w-full mt-6 mr-0 mb-0 ml-0  text-black space-y-6">
             {addresses && addresses.length ? (
               addresses.map((item) => (
                 <div
                   onClick={() => handleSelectedAddress(item)}
                   key={item._id}
-                  className={`border p-6 ${
+                  className={`border p-6  ₹{
                     item._id === selectedAddress ? "border-red-900" : ""
                   }`}
                 >
@@ -267,7 +268,7 @@ export default function Checkout() {
             <div className="flex items-center justify-between">
               <p className="text-sm font-medium text-gray-900">Subtotal</p>
               <p className="text-lg font-bold text-gray-900">
-                $
+                 ₹
                 {cartItems && cartItems.length
                   ? cartItems.reduce(
                       (total, item) => item.productID.price + total,
@@ -283,7 +284,7 @@ export default function Checkout() {
             <div className="flex items-center justify-between">
               <p className="text-sm font-medium text-gray-900">Total</p>
               <p className="text-lg font-bold text-gray-900">
-                $
+                 ₹
                 {cartItems && cartItems.length
                   ? cartItems.reduce(
                       (total, item) => item.productID.price + total,

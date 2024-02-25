@@ -23,7 +23,7 @@ export async function PUT(req) {
       } = data;
 
       const updateOrder = await Order.findOneAndUpdate(
-        { _id: _id },
+        { _id : _id },
         {
           shippingAddress,
           orderItems,

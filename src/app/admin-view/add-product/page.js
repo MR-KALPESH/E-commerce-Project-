@@ -13,7 +13,7 @@ import {
   firebaseConfig,
   firebaseStroageURL,
 } from "@/utils";
-import { initializeApp } from "firebase/app";
+import { initializeApp } from 'firebase/app';
 import {
   getDownloadURL,
   getStorage,
@@ -34,7 +34,6 @@ const createUniqueFileName = (getFile) => {
 
   return `${getFile.name}-${timeStamp}-${randomStringValue}`;
 };
-
 async function helperForUPloadingImageToFirebase(file) {
   const getFileName = createUniqueFileName(file);
   const storageReference = ref(storage, `ecommerce/${getFileName}`);
@@ -149,7 +148,7 @@ export default function AdminAddNewProduct() {
 
   return (
     <div className="w-full mt-5 mr-0 mb-0 ml-0 relative">
-      <div className="flex flex-col items-start justify-start p-10 bg-white shadow-2xl rounded-xl relative">
+      <div className="flex flex-col items-start justify-start p-10 bg-white text-black shadow-2xl rounded-xl relative">
         <div className="w-full mt-6 mr-0 mb-0 ml-0 space-y-8">
           <input
             accept="image/*"

@@ -58,7 +58,7 @@ export default function Orders() {
   }
 
   return (
-    <section>
+    <section className="text-gray-900">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mt-8 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div>
@@ -80,7 +80,7 @@ export default function Orders() {
                               Total paid amount
                             </p>
                             <p className="mr-3 text-2xl  font-semibold text-gray-900">
-                              ${item.totalPrice}
+                            ₹{item.totalPrice}
                             </p>
                           </div>
                         </div>

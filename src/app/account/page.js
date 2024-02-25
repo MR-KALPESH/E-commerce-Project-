@@ -125,12 +125,12 @@ export default function Account() {
   return (
     <section>
       <div className="mx-auto bg-gray-100 px-4 sm:px-6 lg:px-8">
-        <div className="bg-white shadow">
+        <div className="bg-white  shadow">
           <div className="p-6 sm:p-12">
             <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
               {/* we have render random user image here */}
             </div>
-            <div className="flex flex-col flex-1">
+            <div className="flex flex-col flex- 1 text-black">
               <h4 className="text-lg font-semibold text-center md:text-left">
                 {user?.name}
               </h4>
@@ -140,7 +140,7 @@ export default function Account() {
             <button onClick={()=>router.push('/orders')} className="mt-5  inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide">
               View Your Orders
             </button>
-            <div className="mt-6">
+            <div className="mt-6 text-black">
               <h1 className="font-bold text-lg">Your Addresses :</h1>
               {pageLevelLoader ? (
                 <PulseLoader
@@ -150,10 +150,10 @@ export default function Account() {
                   data-testid="loader"
                 />
               ) : (
-                <div className="mt-4 flex flex-col gap-4">
+                <div className="mt-4 flex flex-col gap-4 text-black">
                   {addresses && addresses.length ? (
                     addresses.map((item) => (
-                      <div className="border p-6" key={item._id}>
+                      <div className="border p-6 text-black" key={item._id}>
                         <p>Name : {item.fullName}</p>
                         <p>Address : {item.address}</p>
                         <p>City : {item.city}</p>
@@ -201,7 +201,7 @@ export default function Account() {
               </button>
             </div>
             {showAddressForm ? (
-              <div className="flex flex-col mt-5 justify-center pt-4 items-center">
+              <div className="flex flex-col mt-5 justify-center pt-4 items-center text-black">
                 <div className="w-full mt-6 mr-0 mb-0 ml-0 space-y-8">
                   {addNewAddressFormControls.map((controlItem) => (
                     <InputComponent

@@ -5,9 +5,11 @@ const configOptions = {
   useUnifiedTopology: true,
 };
 
+// your MOngoDB database connection
+
 const connectToDB = async () => {
   const connectionUrl =
-    "your-mongodb-url";
+    "mongodb+srv://mrkalpesh03:Kalpesh2004@cluster0.eg97dkc.mongodb.net/Ecommerce-2023";  
 
   mongoose
     .connect(connectionUrl, configOptions)

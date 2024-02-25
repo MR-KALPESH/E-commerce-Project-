@@ -8,7 +8,7 @@ import Cookies from "js-cookie";
 import { usePathname, useRouter } from "next/navigation";
 import CartModal from "../CartModal";
 
-function NavItems({ isModalView = false, isAdminView, router }) {
+function NavItems({ isModalView = true, isAdminView , router }) {
   return (
     <div
       className={`items-center justify-between w-full md:flex md:w-auto ${
@@ -17,7 +17,7 @@ function NavItems({ isModalView = false, isAdminView, router }) {
       id="nav-items"
     >
       <ul
-        className={`flex flex-col p-4 md:p-0 mt-4 font-medium  rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-white ${
+        className={`flex flex-col p-4 md:p-0 mt-4 font-medium  rounded-lg md:flex-row md:space-x-8 md:mt-0  md:border-0 bg-white ${
           isModalView ? "border-none" : "border border-gray-100"
         }`}
       >
@@ -55,7 +55,7 @@ export default function Navbar() {
     currentUpdatedProduct,
     setCurrentUpdatedProduct,
     showCartModal,
-    setShowCartModal
+    setShowCartModal,
   } = useContext(GlobalContext);
 
   const pathName = usePathname();
@@ -83,14 +83,14 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-white fixed w-full z-20 top-0 left-0 border-b border-gray-200">
+      <nav className="bg-white text-black fixed w-full z-20 top-0 left-0 border-b border-gray-200">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div
             onClick={() => router.push("/")}
             className="flex items-center cursor-pointer"
           >
             <span className="slef-center text-2xl font-semibold whitespace-nowrap">
-              Ecommercery
+              E commerce
             </span>
           </div>
           <div className="flex md:order-2 gap-2">
@@ -100,7 +100,7 @@ export default function Navbar() {
                   className={
                     "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
                   }
-                  onClick={()=>router.push('/account')}
+                  onClick={() => router.push("/account")}
                 >
                   Account
                 </button>
@@ -108,7 +108,7 @@ export default function Navbar() {
                   className={
                     "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white"
                   }
-                  onClick={()=> setShowCartModal(true)}
+                  onClick={() => setShowCartModal(true)}
                 >
                   Cart
                 </button>

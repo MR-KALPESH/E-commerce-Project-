@@ -47,7 +47,7 @@ export default function CommonCart({
                             </div>
                             <div className="mt-4 flex gap-3 items-end justify-between sm:mt-0 sm:items-start sm:justify-end">
                               <p className="shrink-0 w-20 text-base font-semibold text-gray-950 sm:order-1 sm:ml-8 sm:text-right">
-                                $
+                              ₹
                                 {cartItem &&
                                   cartItem.productID &&
                                   cartItem.productID.price}
@@ -88,7 +88,7 @@ export default function CommonCart({
                 <div className="flex items-center justify-between">
                   <p className="text-sm text-gray-400">Subtotal</p>
                   <p className="text-lg text-black font-semibold">
-                    $
+                  ₹
                     {cartItems && cartItems.length
                       ? cartItems.reduce(
                           (total, item) => item.productID.price + total,
@@ -99,12 +99,12 @@ export default function CommonCart({
                 </div>
                 <div className="flex items-center justify-between">
                   <p className="text-sm text-gray-400">Shipping</p>
-                  <p className="text-lg text-black font-semibold">$0</p>
+                  <p className="text-lg text-black font-semibold">₹0</p>
                 </div>
                 <div className="flex items-center justify-between">
                   <p className="text-sm text-gray-400">Total</p>
                   <p className="text-lg text-black font-semibold">
-                    $
+                  ₹
                     {cartItems && cartItems.length
                       ? cartItems.reduce(
                           (total, item) => item.productID.price + total,

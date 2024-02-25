@@ -21,9 +21,10 @@ const initialFormData = {
 export default function Register() {
   const [formData, setFormData] = useState(initialFormData);
   const [isRegistered, setIsRegistered] = useState(false);
-  const { pageLevelLoader, setPageLevelLoader , isAuthUser } = useContext(GlobalContext);
+  const { pageLevelLoader, setPageLevelLoader, isAuthUser } =
+    useContext(GlobalContext);
 
-  const router = useRouter()
+  const router = useRouter();
 
   console.log(formData);
 
@@ -83,7 +84,7 @@ export default function Register() {
                   className="inline-flex w-full items-center justify-center bg-black px-6 py-4 text-lg 
                 text-white transition-all duration-200 ease-in-out focus:shadow font-medium uppercase tracking-wide
                 "
-                onClick={()=>router.push('/login')}
+                  onClick={() => router.push("/login")}
                 >
                   Login
                 </button>

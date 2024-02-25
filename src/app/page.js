@@ -30,12 +30,11 @@ export default function Home() {
       <section className="">
         <div className="grid max-w-screen-xl px-4 py-8 mx-suto  lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div className="mr-auto place-self-center lg:col-span-7">
-            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
+            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-800">
               Best Fashion Collection
             </h1>
             <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
-              Quisquemos sodales suscipit tortor ditaemcos condimentum de cosmo
-              lacus meleifend menean diverra loremous.
+            Fashion is very important. It is life - enhancing and, like everything that gives pleasure, it is worth doing well.
             </p>
 
             <button
@@ -96,7 +95,7 @@ export default function Home() {
                               {productItem.name}
                             </h3>
                             <p className="mt-1 text-sm text-gray-800">
-                              ${productItem.price}{" "}
+                            ₹{productItem.price}{" "}
                               <span className="text-red-700">{`(-${productItem.priceDrop}%) Off`}</span>
                             </p>
                           </div>
@@ -112,7 +111,7 @@ export default function Home() {
             <h2 className="text-xl font-bold text-gray-950 sm:text-3xl">
               SHOP BY CATEGORY
             </h2>
-          </div>
+          </div>w
           <ul className="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
             <li>
               <div className="relative block group">

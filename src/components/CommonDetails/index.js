@@ -87,7 +87,7 @@ export default function CommonDetails({ item }) {
                     item.onSale === "yes" ? "line-through" : ""
                   }`}
                 >
-                  ${item && item.price}
+                  ₹{item && item.price}
                 </h1>
                 {item.onSale === "yes" ? (
                   <h1 className="text-3xl font-bold text-red-700">{`$${(

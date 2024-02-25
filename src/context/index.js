@@ -15,7 +15,14 @@ export const initialCheckoutFormData = {
   isProcessing: true,
 };
 
-const protectedRoutes = ["cart", "checkout", "account", "orders", "admin-view"];
+
+const protectedRoutes = [
+  "cart",
+ "checkout",
+  "account", 
+  "orders",
+   "admin-view"
+  ];
 
 const protectedAdminRoutes = [
   "/admin-view",

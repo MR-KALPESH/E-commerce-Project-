@@ -27,7 +27,7 @@ export default function AdminView() {
       setPageLevelLoader(false);
       setAllOrdersForAllUsers(
         res.data && res.data.length
-          ? res.data.filter((item) => item.user._id !== user._id)
+          ? res.data.filter((item) => item.user && item.user._id !== user._id)
           : []
       );
     } else {
@@ -83,7 +83,7 @@ export default function AdminView() {
                       className="bg-gray-200 shadow p-5 flex flex-col space-y-3 py-6 text-left"
                     >
                       <div className="flex">
-                        <h1 className="font-bold text-lg mb-3 flex-1">
+                        <h1 className="font-bold text-lg mb-3 flex-1 text-gray-900">
                           #order: {item._id}
                         </h1>
                         <div className="flex flex-col gap-2">
@@ -108,7 +108,7 @@ export default function AdminView() {
                               Total Paid Amount :
                             </p>
                             <p className="text-sm  font-semibold text-gray-900">
-                              ${item?.totalPrice}
+                               ₹{item?.totalPrice}
                             </p>
                           </div>
                         </div>

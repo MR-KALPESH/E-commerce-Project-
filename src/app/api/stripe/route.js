@@ -2,7 +2,8 @@ import AuthUser from "@/middleware/AuthUser";
 import { NextResponse } from "next/server";
 
 const stripe = require("stripe")(
-  "sk_test_51NMv6ZSC6E6fnyMeTYV3h3Xge6Tot3xYQVEO6KMpiB5A6bKIrRS9YymIBEupAFqF0XM274IwwU2Zq7EXx1Pn8LiA00SyPEZqk9"
+// ======================= stripe payment key =======================================(1)
+   "sk_test_51OU8h3SGLTBMdoDMUIuoBT6JnkIcfpcO4seggEp4DMZK75HaE1Ut4gFh5kLZksAozP4bOMGwONCQ9u5gXl4uLrFl00OB9GPQzr" //
 );
 
 export const dynamic = "force-dynamic";
