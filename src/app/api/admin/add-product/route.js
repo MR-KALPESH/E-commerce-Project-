@@ -24,7 +24,7 @@ export async function POST(req) {
 
     const isAuthUser = await AuthUser(req)
 
-    console.log(isAuthUser , 'GROUP_no M67');
+    // console.log(isAuthUser , 'GROUP_no M67');
 
     if (isAuthUser?.role === "admin") {
       const extractData = await req.json();
@@ -80,7 +80,7 @@ export async function POST(req) {
       });
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     return NextResponse.json({
       success: false,
       message: "Something went wrong ! Please try again later",
